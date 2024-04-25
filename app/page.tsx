@@ -62,9 +62,9 @@ const Home = () => {
     <div className="container mx-auto py-8">
       <div>
         <Grid container spacing={2}>
-          <Grid item xs={7}>
+          <Grid item xs={12} sm={7}>
             <div className="border border-gray-500">
-              <div className="grid grid-cols-5 gap-0 text-white">
+              <div className="grid grid-cols-1 sm:grid-cols-5 gap-0 text-white">
                 {products.map((product, index) => (
                   <div
                     key={index}
@@ -81,13 +81,13 @@ const Home = () => {
               </div>
             </div>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={12} sm={5}>
             {selectedProduct && (
               <div className="mt-8 border border-gray-500 rounded-lg p-4">
                 <img
                   src={selectedProduct.image}
                   alt={selectedProduct.title}
-                  className="w-64 h-64 object-cover rounded-lg shadow-md"
+                  className="w-full sm:w-64 h-64 object-cover rounded-lg shadow-md"
                 />
                 <p className="text-lg font-bold mt-4">
                   {selectedProduct.title}
